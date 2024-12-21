@@ -102,9 +102,18 @@ mod linux {
                     "raspbian" => Some(Distribution::Raspbian),
                     "ubuntu" => Some(Distribution::Ubuntu),
                     // if ID is not configured look for ID_LIKE. this assumes ID is above ID_LIKE
-                    _ => if var == "ID_LIKE" { return None } else { var = "ID_LIKE"; None },
+                    _ => {
+                        if var == "ID_LIKE" {
+                            return None;
+                        } else {
+                            var = "ID_LIKE";
+                            None
+                        }
+                    }
                 };
-                if distro.is_some() { return distro };
+                if distro.is_some() {
+                    return distro;
+                };
             }
         }
 

@@ -6,3 +6,6 @@ build:
 
 install:
     cargo install --path .
+
+fmt:
+    cargo fmt
