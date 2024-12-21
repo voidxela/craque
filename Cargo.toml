@@ -1,6 +1,6 @@
 [package]
 name = "croq"
-version = "0.8.0"
+version = "0.8.1"
 authors = ['voidxela <alex@xela.foo>']
 description = "Fast and customizable shell prompt"
 license = "MIT"
