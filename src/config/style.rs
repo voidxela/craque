@@ -144,13 +144,13 @@ impl HexColor {
     }
 }
 
-impl<'de> Deserialize<'de> for HexColor {
+impl <'de> Deserialize<'de> for HexColor {
     fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
     where
         D: Deserializer<'de>,
     {
         struct RGBVisitor;
-        impl<'de> Visitor<'de> for RGBVisitor {
+        impl Visitor <'_>for RGBVisitor {
             type Value = HexColor;
 
             fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
